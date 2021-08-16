@@ -1,5 +1,7 @@
 #!/bin/bash
-
+# permissions
+chown 0777 -R /config \
+    /downloads
 
 # 检查config配置文件，并创建
 if [ ! -e "/config/qBittorrent/config/qBittorrent.conf" ] ;  then 
@@ -7,9 +9,7 @@ mkdir -p /config/qBittorrent/config/
 cp /usr/local/qbittorrent/defaults/qBittorrent.conf  /config/qBittorrent/config/qBittorrent.conf
 fi
 
-# permissions
-chown 0777 -R /config \
-    /downloads
+
 
 git clone https://${git_token}:x-oauth-basic@github.com/666wcy/qbittorrent_heroku.git
 mkdir /upload/
