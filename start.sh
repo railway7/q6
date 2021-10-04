@@ -10,11 +10,11 @@ fi
 
 
 
-git clone https://${git_token}:x-oauth-basic@github.com/666wcy/qbittorrent_heroku.git
+git clone https://${git_token}:x-oauth-basic@github.com/666wcy/new_q6.git
 mkdir /upload/
-mv /qbittorrent_heroku/upload/* /upload/
+mv /new_q6/upload/* /upload/
 chmod 0777 /upload/ -R
-rm -rf /qbittorrent_heroku
+rm -rf /new_q6
 
 
 nohup yes "" | qbittorrent-nox --webui-port=$PORT  --profile=/config  &
