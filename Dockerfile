@@ -26,5 +26,5 @@ RUN mkdir /downloads
 RUN sudo chown 0777 -R /config
 RUN sudo chown 0777 -R /downloads
 
-CMD wget https://raw.githubusercontent.com/666wcy/final_qb/main/start.sh  && chmod 0777 start.sh && bash start.sh
+CMD wget https://raw.githubusercontent.com/666wcy/final_q6/main/start.sh  && chmod 0777 start.sh && bash start.sh
 
