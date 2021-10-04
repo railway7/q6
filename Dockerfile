@@ -9,6 +9,9 @@ RUN apt-get install nginx -y
 
 COPY /nginx.conf /etc/nginx/
 
+
+RUN sudo apt install tzdata -y
+
 RUN sudo apt-get update
 RUN apt-get install wget -y
 RUN apt-get install git -y
