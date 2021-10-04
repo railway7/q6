@@ -3,7 +3,11 @@ FROM ubuntu
 
 COPY root /
 RUN apt-get update
-RUN apt-get install sudo
+RUN apt-get install sudo -y
+
+RUN apt-get install nginx -y
+
+RUN mv /nginx.conf /etc/nginx/
 
 RUN sudo apt-get update
 RUN apt-get install wget -y
