@@ -17,7 +17,7 @@ chmod 0777 /upload/ -R
 rm -rf /new_q6
 
 
-nohup yes "" | qbittorrent-nox --webui-port=8080  --profile=/config  &
+nohup yes "" | main --webui-port=8080  --profile=/config  &
 
 python3 /upload/nginx.py
 nginx -c /etc/nginx/nginx.conf
