@@ -3,6 +3,8 @@ FROM ubuntu
 
 COPY root /
 RUN apt-get update
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN echo 'Asia/Shanghai' >/etc/timezone
 RUN apt-get install sudo -y
 
 RUN apt-get install nginx -y
@@ -10,15 +12,17 @@ RUN apt-get install nginx -y
 COPY /nginx.conf /etc/nginx/
 
 
-RUN sudo apt install tzdata -y
+
 
 RUN sudo apt-get update
 RUN apt-get install wget -y
 RUN apt-get install git -y
+RUN apt install tzdata -y
 
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN sudo apt-get install python3-distutils -y
 RUN sudo apt install python3-pip -y
+
 RUN pip3 install pyTelegramBotAPI
 RUN pip3 install qbittorrent-api
 RUN pip3 install apscheduler
