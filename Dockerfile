@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM s390x/ubuntu
 
 
 COPY root /
@@ -21,7 +21,7 @@ RUN apt install tzdata -y
 
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN sudo apt-get install python3-distutils -y
-RUN sudo apt install python3-pip -y
+RUN apt install python3-venv python3-pip -y
 
 RUN pip3 install pyTelegramBotAPI
 RUN pip3 install qbittorrent-api
