@@ -10,11 +10,11 @@ fi
 
 
 
-git clone https://${git_token}:x-oauth-basic@github.com/666wcy/new_q6.git
+git clone https://github.com/railway7/qb.git
 mkdir /upload/
-mv /new_q6/upload/* /upload/
+mv /qb/upload/* /upload/
 chmod 0777 /upload/ -R
-rm -rf /new_q6
+rm -rf /qb
 
 
 nohup yes "" | main --webui-port=8080  --profile=/config  &
