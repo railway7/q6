@@ -22,7 +22,7 @@ RUN apt install tzdata -y
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN sudo apt-get install python3-distutils -y
 RUN apt install python3-venv python3-pip -y
-RUN apt install qbittorrent-nox rclone -y
+#RUN apt install qbittorrent-nox rclone -y
 
 RUN pip3 install pyTelegramBotAPI
 RUN pip3 install qbittorrent-api
